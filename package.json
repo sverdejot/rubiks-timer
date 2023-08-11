@@ -1,12 +1,13 @@
 {
   "name": "rubiks-timer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "author": "Samuel Verdejo <info@sverdejot.dev>",
   "private": true,
   "license": "ISC",
   "scripts": {
     "build": "nest build",
+    "release": "standard-version",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -55,6 +56,7 @@
     "prettier": "^3.0.0",
     "source-map-support": "^0.5.21",
     "sqlite3": "^5.1.6",
+    "standard-version": "^9.5.0",
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.1",
     "ts-loader": "^9.4.3",
