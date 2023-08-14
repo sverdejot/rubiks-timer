@@ -1,10 +1,10 @@
-import SolveTime from '../value-object/SolveTime';
-import UserId from '../../../../shared/domain/value-object/UserId';
-import Scramble from '../value-object/Scramble';
-import SolveDate from '../value-object/SolveDate';
-import SolveId from '../../../../shared/domain/value-object/SolveId';
-import AggregateRoot from '../../../../shared/domain/AggregateRoot';
-import { Primitives } from '../../../../shared/domain/value-object/ValueObject';
+import SolveTime from '../value-object/solve-time';
+import UserId from '../../../../shared/domain/value-object/user-id';
+import Scramble from '../value-object/scramble';
+import SolveDate from '../value-object/solve-date';
+import SolveId from '../../../../shared/domain/value-object/solve-id';
+import AggregateRoot from '../../../../shared/domain/aggregate-root';
+import { Primitives } from '../../../../shared/domain/value-object/value-object';
 
 export default class Solve extends AggregateRoot {
   readonly id: SolveId;

@@ -1,10 +1,10 @@
-import SolveId from 'src/contexts/shared/domain/value-object/SolveId';
-import UserId from 'src/contexts/shared/domain/value-object/UserId';
-import SolveCreatorRequest from 'src/contexts/timer/solves/application/request/SolveCreatorRequest';
-import Solve from 'src/contexts/timer/solves/domain/entity/Solve';
-import Scramble from 'src/contexts/timer/solves/domain/value-object/Scramble';
-import SolveDate from 'src/contexts/timer/solves/domain/value-object/SolveDate';
-import SolveTime from 'src/contexts/timer/solves/domain/value-object/SolveTime';
+import SolveId from 'src/contexts/shared/domain/value-object/solve-id';
+import UserId from 'src/contexts/shared/domain/value-object/user-id';
+import SolveCreatorRequest from 'src/contexts/timer/solves/application/request/solve-creator-request';
+import Solve from 'src/contexts/timer/solves/domain/entity/solve';
+import Scramble from 'src/contexts/timer/solves/domain/value-object/scramble';
+import SolveDate from 'src/contexts/timer/solves/domain/value-object/solve-date';
+import SolveTime from 'src/contexts/timer/solves/domain/value-object/solve-time';
 import { v4 } from 'uuid';
 
 export default class SolveMother {

@@ -1,4 +1,4 @@
-import SolveId from '../../../../shared/domain/value-object/SolveId';
+import SolveId from '../../../../shared/domain/value-object/solve-id';
 
 export default class Solves extends Array<SolveId> {
   constructor(solves?: SolveId[]) {

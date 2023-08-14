@@ -1,11 +1,11 @@
 import { EntitySchema } from 'typeorm';
-import Solve from '../../../../domain/entity/Solve';
-import SolveId from '../../../../../../shared/domain/value-object/SolveId';
-import SolveTime from '../../../../domain/value-object/SolveTime';
-import UserId from '../../../../../../shared/domain/value-object/UserId';
-import Scramble from '../../../../domain/value-object/Scramble';
-import SolveDate from '../../../../domain/value-object/SolveDate';
-import { ValueObjectTransformer } from '../../../../../../shared/infrastructure/persistance/typeorm/ValueObjectTransformer';
+import Solve from '../../../../domain/entity/solve';
+import SolveId from '../../../../../../shared/domain/value-object/solve-id';
+import SolveTime from '../../../../domain/value-object/solve-time';
+import UserId from '../../../../../../shared/domain/value-object/user-id';
+import Scramble from '../../../../domain/value-object/scramble';
+import SolveDate from '../../../../domain/value-object/solve-date';
+import { ValueObjectTransformer } from '../../../../../../shared/infrastructure/persistance/typeorm/value-object-transformer';
 
 export const SolveSchema = new EntitySchema<Solve>({
   name: 'Solve',

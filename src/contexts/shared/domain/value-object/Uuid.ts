@@ -1,5 +1,5 @@
 import { validate } from 'uuid';
-import { ValueObject } from './ValueObject';
+import { ValueObject } from './value-object';
 
 export default class Uuid extends ValueObject<string> {
   constructor(value: string) {

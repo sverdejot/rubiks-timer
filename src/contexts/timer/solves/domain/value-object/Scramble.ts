@@ -1,5 +1,5 @@
-import { ValueObject } from '../../../../shared/domain/value-object/ValueObject';
-import InvalidScrambleException from '../exceptions/InvalidScrambleException';
+import { ValueObject } from '../../../../shared/domain/value-object/value-object';
+import InvalidScrambleException from '../exceptions/invalid-scramble-exception';
 
 const validateScramble = (scramble: string): boolean => {
   return RegExp(

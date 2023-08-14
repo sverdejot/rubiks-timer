@@ -1,8 +1,8 @@
-import AggregateRoot from '../../../../shared/domain/AggregateRoot';
-import UserId from '../../../../shared/domain/value-object/UserId';
-import { Primitives } from '../../../../shared/domain/value-object/ValueObject';
-import UserName from '../value-object/UserName';
-import Solves from './Solves';
+import AggregateRoot from '../../../../shared/domain/aggregate-root';
+import UserId from '../../../../shared/domain/value-object/user-id';
+import { Primitives } from '../../../../shared/domain/value-object/value-object';
+import UserName from '../value-object/user-name';
+import Solves from './solves';
 
 export default class User extends AggregateRoot {
   constructor(
