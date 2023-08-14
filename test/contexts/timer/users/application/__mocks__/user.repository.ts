@@ -1,6 +1,6 @@
-import UserId from 'src/contexts/shared/domain/value-object/user-id';
-import User from 'src/contexts/timer/users/domain/entity/user';
-import UserRepository from 'src/contexts/timer/users/domain/repository/user-repository';
+import UserId from 'src/contexts/shared/domain/value-object/user-id.value-object';
+import User from 'src/contexts/timer/users/domain/entity/user.entity';
+import UserRepository from 'src/contexts/timer/users/domain/repository/user.repository';
 
 export default class MockUserRepository implements UserRepository {
   private readonly saveMock: jest.Mock;

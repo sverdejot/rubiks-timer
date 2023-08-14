@@ -1,6 +1,6 @@
-import SolveCreator from 'src/contexts/timer/solves/application/solve-creator';
+import SolveCreator from 'src/contexts/timer/solves/application/solve-creator.application';
 import MockSolveRepository from './__mocks__/solve.repository';
-import SolveMother from './__mothers__/SolveMother';
+import SolveMother from './__mothers__/solve-mother';
 
 describe('create new solves', () => {
   let repo = new MockSolveRepository();

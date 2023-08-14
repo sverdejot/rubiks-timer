@@ -1,4 +1,4 @@
-import Solve from '../../domain/entity/solve';
+import Solve from '../../domain/entity/solve.entity';
 
 export interface AllSolvesFinderResponse {
   solves: Solve[];

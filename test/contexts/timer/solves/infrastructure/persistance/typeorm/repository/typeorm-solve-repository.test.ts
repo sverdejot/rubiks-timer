@@ -1,5 +1,5 @@
 import { DataSource } from 'typeorm';
-import SolveMother from '../../../../application/__mothers__/SolveMother';
+import SolveMother from '../../../../application/__mothers__/solve-mother';
 import { TypeORMSolveRepository } from 'src/contexts/timer/solves/infrastructure/persistance/typeorm/repository/solve.repository';
 
 describe('save solve to database', () => {

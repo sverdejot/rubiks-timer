@@ -1,8 +1,8 @@
-import SolveTime from '../value-object/solve-time';
-import UserId from '../../../../shared/domain/value-object/user-id';
-import Scramble from '../value-object/scramble';
-import SolveDate from '../value-object/solve-date';
-import SolveId from '../../../../shared/domain/value-object/solve-id';
+import SolveTime from '../value-object/solve-time.value-object';
+import UserId from '../../../../shared/domain/value-object/user-id.value-object';
+import Scramble from '../value-object/scramble.value-object';
+import SolveDate from '../value-object/solve-date.value-object';
+import SolveId from '../../../../shared/domain/value-object/solve-id.value-object';
 import AggregateRoot from '../../../../shared/domain/aggregate-root';
 import { Primitives } from '../../../../shared/domain/value-object/value-object';
 

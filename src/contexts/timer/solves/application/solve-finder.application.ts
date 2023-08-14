@@ -1,8 +1,8 @@
-import SolveRepository from '../domain/repository/solve-repository';
-import SolveId from '../../../shared/domain/value-object/solve-id';
-import SolveFinderRequest from './request/solve-finder-request';
-import SolveFinderResponse from './response/solve-finder-response';
-import { AllSolvesFinderResponse } from './response/all-solves-finder-response';
+import SolveRepository from '../domain/repository/solve.repository';
+import SolveId from '../../../shared/domain/value-object/solve-id.value-object';
+import SolveFinderRequest from './request/solve-finder.request';
+import SolveFinderResponse from './response/solve-finder.response';
+import { AllSolvesFinderResponse } from './response/all-solves-finder.response';
 import { Inject, Injectable } from '@nestjs/common';
 
 @Injectable()

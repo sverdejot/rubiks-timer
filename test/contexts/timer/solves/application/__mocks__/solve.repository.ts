@@ -1,8 +1,8 @@
 // TODO: create a class to mock each member of the interface passed by type parameter
 
-import SolveId from 'src/contexts/shared/domain/value-object/solve-id';
-import Solve from 'src/contexts/timer/solves/domain/entity/solve';
-import SolveRepository from 'src/contexts/timer/solves/domain/repository/solve-repository';
+import SolveId from 'src/contexts/shared/domain/value-object/solve-id.value-object';
+import Solve from 'src/contexts/timer/solves/domain/entity/solve.entity';
+import SolveRepository from 'src/contexts/timer/solves/domain/repository/solve.repository';
 
 export default class MockSolveRepository implements SolveRepository {
   private readonly saveMock: jest.Mock;

@@ -1,7 +1,7 @@
-import UserCreator from 'src/contexts/timer/users/application/user-creator';
+import UserCreator from 'src/contexts/timer/users/application/user-creator.application';
 import MockUserRepository from './__mocks__/user.repository';
 import UserMother from './__mothers__/user-mother';
-import SolveId from 'src/contexts/shared/domain/value-object/solve-id';
+import SolveId from 'src/contexts/shared/domain/value-object/solve-id.value-object';
 
 describe('create users', () => {
   let repo: MockUserRepository;

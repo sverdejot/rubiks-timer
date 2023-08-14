@@ -1,6 +1,6 @@
-import SolveRepository from '../domain/repository/solve-repository';
-import SolveId from '../../../shared/domain/value-object/solve-id';
-import { SolveDeleterRequest } from './request/solve-deleter-request';
+import SolveRepository from '../domain/repository/solve.repository';
+import SolveId from '../../../shared/domain/value-object/solve-id.value-object';
+import { SolveDeleterRequest } from './request/solve-deleter.request';
 
 export default class SolveDeleter {
   constructor(private readonly repo: SolveRepository) {}

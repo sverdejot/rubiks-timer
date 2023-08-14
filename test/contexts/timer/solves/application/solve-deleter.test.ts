@@ -1,6 +1,6 @@
-import SolveDeleter from 'src/contexts/timer/solves/application/solve-deleter';
-import SolveMother from './__mothers__/SolveMother';
+import SolveDeleter from 'src/contexts/timer/solves/application/solve-deleter.application';
 import MockSolveRepository from './__mocks__/solve.repository';
+import SolveMother from './__mothers__/solve-mother';
 
 describe('delete solves', () => {
   let repo: MockSolveRepository;

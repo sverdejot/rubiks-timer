@@ -1,7 +1,7 @@
-import UserId from 'src/contexts/shared/domain/value-object/user-id';
-import Solves from 'src/contexts/timer/users/domain/entity/solves';
-import User from 'src/contexts/timer/users/domain/entity/user';
-import UserName from 'src/contexts/timer/users/domain/value-object/user-name';
+import UserId from 'src/contexts/shared/domain/value-object/user-id.value-object';
+import Solves from 'src/contexts/timer/users/domain/entity/solves.entity';
+import User from 'src/contexts/timer/users/domain/entity/user.entity';
+import UserName from 'src/contexts/timer/users/domain/value-object/user-name.value-object';
 import { v4 } from 'uuid';
 
 // TODO: this can be refactored

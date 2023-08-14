@@ -1,4 +1,4 @@
-import InvalidArgumentError from '../exceptions/invalid-argument-error';
+import InvalidArgumentError from '../errors/invalid-argument-error';
 
 export type Primitives = string | number | boolean | Primitives[];
 

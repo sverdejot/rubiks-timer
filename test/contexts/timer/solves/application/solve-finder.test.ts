@@ -1,6 +1,6 @@
 import { v4 } from 'uuid';
-import SolveFinder from 'src/contexts/timer/solves/application/solve-finder';
-import SolveMother from './__mothers__/SolveMother';
+import SolveFinder from 'src/contexts/timer/solves/application/solve-finder.application';
+import SolveMother from './__mothers__/solve-mother';
 import MockSolveRepository from './__mocks__/solve.repository';
 
 describe('find solves', () => {

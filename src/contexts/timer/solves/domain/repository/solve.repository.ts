@@ -1,5 +1,5 @@
-import Solve from '../entity/solve';
-import SolveId from '../../../../shared/domain/value-object/solve-id';
+import Solve from '../entity/solve.entity';
+import SolveId from '../../../../shared/domain/value-object/solve-id.value-object';
 
 export default interface SolveRepository {
   save(solve: Solve): Promise<void>;

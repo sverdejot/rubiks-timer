@@ -1,3 +1,3 @@
-import Uuid from './uuid';
+import Uuid from './uuid.value-object';
 
 export default class SolveId extends Uuid {}

@@ -1,4 +1,4 @@
-import UserFinder from 'src/contexts/timer/users/application/user-finder';
+import UserFinder from 'src/contexts/timer/users/application/user-finder.application';
 import MockUserRepository from './__mocks__/user.repository';
 import UserMother from './__mothers__/user-mother';
 
