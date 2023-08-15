@@ -1,27 +1,19 @@
-import {
-  Body,
-  Controller,
-  Get,
-  HttpStatus,
-  Param,
-  Put,
-  Res,
-} from '@nestjs/common';
-import { Response } from 'express';
+import { Body, Controller, Delete, Get, Param, Put } from '@nestjs/common';
 import SolveFinder from '../../application/solve-finder.application';
 import SolveCreator from '../../application/solve-creator.application';
+import SolveDeleter from '../../application/solve-deleter.application';
 
 @Controller('solve')
 export default class SolveController {
   constructor(
     private readonly finder: SolveFinder,
     private readonly creator: SolveCreator,
+    private readonly deleter: SolveDeleter,
   ) {}
 
   @Get()
-  async getSolves(@Res() res: Response) {
-    const solves = await this.finder.findAll();
-    res.status(HttpStatus.OK).send(solves);
+  async getSolves() {
+    return await this.finder.findAll();
   }
 
   @Get(':id')
@@ -36,7 +28,7 @@ export default class SolveController {
     @Body('date') date: number,
     @Body('userId') userId: string,
     @Body('scramble') scramble: string,
-  ): Promise<void> {
+  ) {
     await this.creator.run({
       id: id,
       time: time,
@@ -44,5 +36,10 @@ export default class SolveController {
       userId: userId,
       scramble: scramble,
     });
+  }
+
+  @Delete(':id')
+  async deleteSolve(@Param('id') id: string) {
+    await this.deleter.run({ id: id });
   }
 }
