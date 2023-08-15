@@ -1,7 +1,9 @@
 import SolveRepository from '../domain/repository/solve.repository';
 import SolveId from '../../../shared/domain/value-object/solve-id.value-object';
 import { SolveDeleterRequest } from './request/solve-deleter.request';
+import { Injectable } from '@nestjs/common';
 
+@Injectable()
 export default class SolveDeleter {
   constructor(private readonly repo: SolveRepository) {}
 

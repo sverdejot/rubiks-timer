@@ -1,4 +1,4 @@
-import { EntitySchema } from 'typeorm';
+import { DataSource, EntitySchema } from 'typeorm';
 import Solve from '../../../../domain/entity/solve.entity';
 import SolveRepository from '../../../../domain/repository/solve.repository';
 import TypeORMRepository from '../../../../../../shared/infrastructure/persistance/typeorm/repository';
@@ -6,12 +6,15 @@ import { SolveSchema } from '../schema/solve.schema';
 import SolveId from '../../../../../../shared/domain/value-object/solve-id.value-object';
 import { Injectable } from '@nestjs/common';
 
-// TODO: remove await this.ds, ds should be a DataSource, not a Promise<DataSource>
 @Injectable()
 export class TypeORMSolveRepository
   extends TypeORMRepository<Solve>
   implements SolveRepository
 {
+  constructor(private dataSource: DataSource) {
+    super(dataSource);
+  }
+
   async save(solve: Solve): Promise<void> {
     await this.repository.save(solve);
   }

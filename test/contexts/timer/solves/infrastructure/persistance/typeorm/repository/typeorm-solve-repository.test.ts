@@ -10,7 +10,7 @@ describe('save solve to database', () => {
       type: 'sqlite',
       database: ':memory:',
       entities: [
-        `${__dirname}/../../../../../../../src/contexts/*/*/infrastructure/persistance/typeorm/schema/*.schema.{js,ts}`,
+        `${__dirname}/../../../../../../../../src/contexts/*/*/infrastructure/persistance/typeorm/schema/*.schema.{js,ts}`,
       ],
       synchronize: true,
     });

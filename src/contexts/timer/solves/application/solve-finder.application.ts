@@ -3,15 +3,11 @@ import SolveId from '../../../shared/domain/value-object/solve-id.value-object';
 import SolveFinderRequest from './request/solve-finder.request';
 import SolveFinderResponse from './response/solve-finder.response';
 import { AllSolvesFinderResponse } from './response/all-solves-finder.response';
-import { Inject, Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export default class SolveFinder {
-  constructor(
-    @Inject('SolveRepository') private readonly repo: SolveRepository,
-  ) {
-    this.repo = repo;
-  }
+  constructor(private readonly repo: SolveRepository) {}
 
   async find(request: SolveFinderRequest): Promise<SolveFinderResponse> {
     const id = new SolveId(request.id);
