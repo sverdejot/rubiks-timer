@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "solves",
-        "qa"
+        "qa",
+        "backend"
     ]
 }
