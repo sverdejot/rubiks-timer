@@ -15,13 +15,21 @@ The application consists of a very simple timer for solving Rubik's cube, with c
 The application uses the TypeScript tech stack:
 
 - `Node.js` w/ `TypeScript` as Runtime:
+    - `NestJS` as platform for HTTP Server, DI... with `express` as backend server
     - `Prettier` for formatting
     - `eslint` for linting
     - `TypeORM` as Object-Relational Mapper
     - `Jest` as testing framework (unit and int.)
+    - `supertest` as testing framework for E2E purposes
 
 - `GitHub Actions` as CI/CD runner.
     - `Makefile` as abstraction layer for CI/CD purposes
+
+- `master-only` as git worklow (since I'll be working alone and with TDD approach)
+    - `conventional-commits` as commit naming strategy
+    - `lint-staged` and `commit-lint` to enforce naming convention
+    - `husky` as git-hooks framework
+    - `standard-version` as release generator
 
 ---
 
@@ -29,7 +37,10 @@ The application uses the TypeScript tech stack:
 
 Currently, it is only possible to run the test suite (both unit and integration). I will be adding both the backend API and frontend framework as soon as the domain layer is well-defined.
 
-To run the test suite, it is needed to have `Makefile` installed and (optionally) `Node.js>=18`:
+To run the app or test suite, you can:
+
+* Clone this project and open it using VS Code and `devcontainers` (VS Code extension), which will create a container with all the needed dependencies.
+* Install both Node.js>=(see `.nvmrc` to get tagged version) and `Make` to run the available targets.
 
 ```bash
 git clone https://github.com/sverdejot/rubiks-timer
@@ -42,8 +53,12 @@ Once all the dependencies have been installed, you can simply run:
 ```bash
 make help
 ```
-to view the avaiable targets.
+to view the avaiable targets or
 
+```bash
+make start
+```
+to start the app on `dev` mode.
 ---
 
 ## DDD: Domain layer
