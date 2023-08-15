@@ -27,4 +27,4 @@ check-release:
 	@npm run release --dry-run
 
 tree:
-	@tree -I 'node_modules/|coverage/|.git/|.tmp/' -a -c -r
+	@tree -I 'node_modules/|coverage/|.git/|.tmp/|dist/|var/' -a -c -r
