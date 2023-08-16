@@ -5,6 +5,18 @@ import {
   Module,
 } from '@nestjs/common';
 import { createLogger, transports, format, Logger } from 'winston';
+import { FileTransportOptions } from 'winston/lib/winston/transports';
+
+const fileTransportOptFactory = (level: string): FileTransportOptions => {
+  return {
+    level: level,
+    filename: `var/logs/${level}.log`,
+    maxsize: 10485760,
+    maxFiles: 5,
+    tailable: true,
+    zippedArchive: true,
+  };
+};
 
 export default class WinstonLogger
   extends ConsoleLogger
@@ -20,16 +32,16 @@ export default class WinstonLogger
   }
   // TODO: make this config injectable
   private winstonFactory(): Logger {
-    const fileTransport = new transports.File({
-      format: format.combine(format.timestamp(), format.json()),
-      filename: 'var/logs/application.log',
-      maxsize: 10485760,
-      maxFiles: 5,
-      tailable: true,
-      zippedArchive: true,
-    });
+    const infoFile = new transports.File(fileTransportOptFactory('info'));
+    const errorFile = new transports.File(fileTransportOptFactory('error'));
+
     return createLogger({
-      transports: [fileTransport],
+      format: format.combine(
+        format.label({ label: super.context }),
+        format.timestamp(),
+        format.json(),
+      ),
+      transports: [infoFile, errorFile],
     });
   }
 
