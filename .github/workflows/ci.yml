@@ -34,5 +34,8 @@ jobs:
       - name: 🔦 Lint
         run: make lint
 
-      - name: 🧪 Test
+      - name: 🧪 Unit Testing
         run: make test-unit
+
+      - name:  ⛙ Integration Testing
+        run: make test-int
