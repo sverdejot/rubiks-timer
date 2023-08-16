@@ -9,7 +9,6 @@ import SolveDeleter from '../../application/solve-deleter.application';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import timerConfig from 'src/contexts/timer/shared/config/timer.config';
 import { DataSource } from 'typeorm';
-import { SolveSchema } from '../persistance/typeorm/schema/solve.schema';
 
 @Module({
   imports: [
@@ -24,7 +23,7 @@ import { SolveSchema } from '../persistance/typeorm/schema/solve.schema';
         port: config.get<number>('timer.db.port.port'),
         username: config.get<string>('timer.db.mysql.user'),
         password: config.get<string>('timer.db.mysql.password'),
-        entities: [SolveSchema],
+        entities: [`${__dirname}/../persistance/typeorm/schema/*.schema.*`],
         synchronize: true,
       }),
       inject: [ConfigService],
