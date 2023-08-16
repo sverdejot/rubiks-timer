@@ -10,7 +10,10 @@ import {
 import SolveFinder from '../../application/solve-finder.application';
 import SolveCreator from '../../application/solve-creator.application';
 import SolveDeleter from '../../application/solve-deleter.application';
+import { CreateSolveRequest } from './requests/create-solve.request';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('solve')
 @Controller('solve')
 export default class SolveController {
   private readonly logger: Logger = new Logger(SolveController.name);
@@ -34,20 +37,14 @@ export default class SolveController {
   }
 
   @Put(':id')
-  async createSolve(
-    @Param('id') id: string,
-    @Body('time') time: number,
-    @Body('date') date: number,
-    @Body('userId') userId: string,
-    @Body('scramble') scramble: string,
-  ) {
+  async createSolve(@Param('id') id: string, @Body() req: CreateSolveRequest) {
     this.logger.log(`Trying to create solve with id [${id}]`);
     await this.creator.run({
       id: id,
-      time: time,
-      date: date,
-      userId: userId,
-      scramble: scramble,
+      time: req.time,
+      date: req.date,
+      userId: req.userId,
+      scramble: req.scramble,
     });
   }
 
