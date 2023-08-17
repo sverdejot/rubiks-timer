@@ -2,8 +2,8 @@ db:
   sqlite:
     database: ':memory:'
   mysql:
-    host: 'localhost'
+    host: 'db'
     port: 3306
-    user: 'root'
+    user: 'timer'
     password: 'root'
     database: 'timer'
