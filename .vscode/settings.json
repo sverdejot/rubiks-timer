@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "solves",
         "qa",
-        "backend"
+        "backend",
+        "timer"
     ]
 }
