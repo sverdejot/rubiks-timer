@@ -2,21 +2,18 @@ import {
   ConsoleLogger,
   ConsoleLoggerOptions,
   LoggerService,
-  Module,
 } from '@nestjs/common';
 import { createLogger, transports, format, Logger } from 'winston';
 import { FileTransportOptions } from 'winston/lib/winston/transports';
 
-const fileTransportOptFactory = (level: string): FileTransportOptions => {
-  return {
-    level: level,
-    filename: `var/logs/${level}.log`,
-    maxsize: 10485760,
-    maxFiles: 5,
-    tailable: true,
-    zippedArchive: true,
-  };
-};
+const fileTransportOptFactory = (level: string): FileTransportOptions => ({
+  level: level,
+  filename: `${__dirname}/var/log/${level}.log`,
+  maxsize: 10485760,
+  maxFiles: 5,
+  tailable: true,
+  zippedArchive: true,
+});
 
 export default class WinstonLogger
   extends ConsoleLogger
@@ -69,9 +66,3 @@ export default class WinstonLogger
     super.verbose(message, ...optionalParams);
   }
 }
-
-@Module({
-  providers: [WinstonLogger],
-  exports: [WinstonLogger],
-})
-export class WinstonLoggerModule {}

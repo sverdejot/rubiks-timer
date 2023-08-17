@@ -1,12 +1,11 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import SolveModule from 'src/contexts/timer/solves/infrastructure/http/solve.module';
-import { WinstonLoggerModule } from './logger/winston.logger';
+import { WinstonLoggerModule } from './logger/winston.module';
 import { ConfigModule } from '@nestjs/config';
+import TimerModule from 'src/contexts/timer/shared/infrastructure/http/timer.module';
 
 @Module({
-  imports: [SolveModule, WinstonLoggerModule, ConfigModule.forRoot()],
+  imports: [TimerModule, WinstonLoggerModule, ConfigModule.forRoot()],
   controllers: [AppController],
-  providers: [],
 })
 export class AppModule {}
