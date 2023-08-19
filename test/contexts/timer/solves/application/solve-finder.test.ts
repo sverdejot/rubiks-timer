@@ -22,7 +22,7 @@ describe('find solves', () => {
     const { solve } = await finder.find(request);
 
     // then
-    expect(solve === expectedSolve);
+    expect(solve === expectedSolve.toPrimitives());
   });
 
   it('should return null when solve does not exist', async () => {
@@ -54,6 +54,6 @@ describe('find solves', () => {
     const { solves } = await finder.findAll();
 
     // then
-    expect(solves === expectedSolves);
+    expect(solves === expectedSolves.map((solve) => solve.toPrimitives()));
   });
 });

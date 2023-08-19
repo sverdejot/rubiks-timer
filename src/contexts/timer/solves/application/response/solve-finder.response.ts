@@ -1,5 +1,5 @@
-import Solve from '../../domain/entity/solve.entity';
+import { Primitives } from 'src/contexts/shared/domain/value-object/value-object';
 
 export default interface SolveFinderResponse {
-  solve: Solve | null;
+  solve: { [key: string]: Primitives } | null;
 }

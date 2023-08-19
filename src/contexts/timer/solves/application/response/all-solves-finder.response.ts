@@ -1,5 +1,5 @@
-import Solve from '../../domain/entity/solve.entity';
+import { Primitives } from 'src/contexts/shared/domain/value-object/value-object';
 
-export interface AllSolvesFinderResponse {
-  solves: Solve[];
+export default interface AllSolvesFinderResponse {
+  solves: { [key: string]: Primitives }[];
 }
