@@ -5,6 +5,7 @@ TEST_DIR = tests
 .PHONY: install
 install:
 	@npm install
+	@npx husky install
 
 .PHONY: format
 format:
@@ -41,3 +42,7 @@ check-release:
 .PHONY: tree
 tree:
 	@tree -I 'node_modules/|coverage/|.git/|.tmp/|dist/|var/' -a -c -r
+
+.PHONY: clean
+clean:
+	@git clean -X -f -d
